@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pow on easmith - заметки</title>
+    <link>http://localhost:1313/tags/pow/</link>
+    <description>Recent content in Pow on easmith - заметки</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/pow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PoW &#43; Random Access Memory</title>
+      <link>http://localhost:1313/post/pow_and_ram/</link>
+      <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/pow_and_ram/</guid>
+      <description>Как усложнить процесс майнинга на специальных устройствах - использовать PoW + Random Access Memory. Другими словами, в алгоритм хэширования включить еще и доказательство случайного чтения из памяти. Сейчас в Ethereum использует для этого отдельный DAG файл.
+Моя же идея заключается в вычислении хэша следующим образом:
+Берем заголовок (header), и случайное число (nonce) Вычиляем цепочку хэшей:
+header + (nonce + 0) header + (nonce + 1) header + (nonce + 2) .</description>
+    </item>
+    
+  </channel>
+</rss>
