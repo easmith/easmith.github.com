@@ -37,10 +37,10 @@ A post shared by Andy Bauch (@andybauch) on Jul 5, 2016 at 8:36am PDT</descripti
     
     <item>
       <title>PoW &#43; Random Access Memory</title>
-      <link>http://localhost:1313/post/pow_and_ram/</link>
+      <link>http://localhost:1313/post/pow-and-ram/</link>
       <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/pow_and_ram/</guid>
+      <guid>http://localhost:1313/post/pow-and-ram/</guid>
       <description>Как усложнить процесс майнинга на специальных устройствах - использовать PoW + Random Access Memory. Другими словами, в алгоритм хэширования включить еще и доказательство случайного чтения из памяти. Сейчас в Ethereum использует для этого отдельный DAG файл.
 Моя же идея заключается в вычислении хэша следующим образом:
 Берем заголовок (header), и случайное число (nonce) Вычиляем цепочку хэшей:
