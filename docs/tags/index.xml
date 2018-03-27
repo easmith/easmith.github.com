@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Blockchain</title>
+      <link>http://localhost:1313/tags/blockchain/</link>
+      <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/blockchain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Crypto</title>
       <link>http://localhost:1313/tags/crypto/</link>
       <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
@@ -44,6 +53,15 @@
       <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pow</title>
+      <link>http://localhost:1313/tags/pow/</link>
+      <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/pow/</guid>
       <description></description>
     </item>
     

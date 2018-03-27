@@ -17,6 +17,13 @@
   </url>
   
   <url>
+    <loc>http://localhost:1313/post/pow_and_ram/</loc>
+    <lastmod>2017-08-29T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2017-10-01T15:30:00+03:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -33,6 +40,13 @@
   <url>
     <loc>http://localhost:1313/tags/bitcoin/</loc>
     <lastmod>2018-03-25T16:01:23+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/blockchain/</loc>
+    <lastmod>2017-08-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -68,6 +82,13 @@
   <url>
     <loc>http://localhost:1313/post/</loc>
     <lastmod>2018-03-25T16:01:23+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/pow/</loc>
+    <lastmod>2017-08-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
