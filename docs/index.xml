@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>easmith - заметки</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on easmith - заметки</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Oct 2017 15:30:00 +0300</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Обо мне</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 01 Oct 2017 15:30:00 +0300</pubDate>
+      
+      <guid>http://localhost:1313/about/</guid>
+      <description>Здравствуй, друг!
+Меня зовут Евгений. Когда-то давно я пас коров и косил сено. А еще танцевал брейк и выпаивал из старых телеков радиодетали для своих поделок.
+Однажды, у меня появился компьютер. Pentium II с 32-мя мегабайтами оперативной памяти! На этом компе я умудрялся пользоватья фотошопом, монтировать видосики, играть и программировать. На нем же я читал Энциклопедию по безопасности, которая открыла для меня новое понимание реальнсти. Реальности, которую не хотелось принимать. Это породило веру в то, что можно изменить мир :))</description>
+    </item>
+    
+    <item>
+      <title>Как я искал биткойны в картинах</title>
+      <link>http://localhost:1313/post/how-late-art/</link>
+      <pubDate>Sun, 25 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/how-late-art/</guid>
+      <description>Совсем недавно наткнулся в одном из телеграмм каналов на новость, о том, что один художник по имени Andy Bauch спрятал в своих картинах ключ к биткойнам.
+Меня привлекают переплетения искусства и технологии, поэтому я заинтересовался и решил попробовать свои силы.
+Произведения Энди представляют собой рисунки созданные из разноцветных частичек конструктора лего.
+Вот одна из работ, в которой спрятаны $20 по курсу на апрель 2016 года:
+A post shared by Andy Bauch (@andybauch) on Jul 5, 2016 at 8:36am PDT</description>
+    </item>
+    
+  </channel>
+</rss>
