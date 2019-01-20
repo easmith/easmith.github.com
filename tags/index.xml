@@ -57,6 +57,24 @@
     </item>
     
     <item>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>http://localhost:1313/tags/github/</link>
+      <pubDate>Wed, 12 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pow</title>
       <link>http://localhost:1313/tags/pow/</link>
       <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
