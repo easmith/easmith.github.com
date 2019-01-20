@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Категории - easmith - заметки</title>
+  <title>easmith - заметки</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -28,9 +28,9 @@
 <meta name="generator" content="Hugo 0.53" />
 
 
-<link rel="canonical" href="http://localhost:1313/categories/" />
-<link href="http://localhost:1313/categories/index.xml" rel="alternate" type="application/rss+xml" title="easmith - заметки" />
-  <link href="http://localhost:1313/categories/index.xml" rel="feed" type="application/rss+xml" title="easmith - заметки" />
+<link rel="canonical" href="http://localhost:1313/" />
+<link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="easmith - заметки" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="easmith - заметки" />
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -50,17 +50,17 @@
 
 
 
-<meta property="og:title" content="Categories" />
+<meta property="og:title" content="" />
 <meta property="og:description" content="Мои странички =)" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/categories/" />
-<meta property="og:updated_time" content="2018-03-25T00:00:00&#43;00:00"/>
+<meta property="og:url" content="http://localhost:1313/" />
+<meta property="og:updated_time" content="2017-08-29T00:00:00&#43;00:00"/>
 
-<meta itemprop="name" content="Categories">
+<meta itemprop="name" content="">
 <meta itemprop="description" content="Мои странички =)">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
+<meta name="twitter:title" content=""/>
 <meta name="twitter:description" content="Мои странички =)"/>
 
 <!--[if lte IE 9]>
@@ -126,33 +126,48 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           
-  
-    <div class="categories">
-      <div class="categories-title">
-        
-          categoryCounter
-        
-      </div>
-      <div class="categories-tags">
-        
-          <a class="category-link" href="/categories/blog/">
-            blog
-            <span class="category-count">2</span>
-          </a>
-        
-          <a class="category-link" href="/categories/golang/">
-            golang
-            <span class="category-count">1</span>
-          </a>
-        
-          <a class="category-link" href="/categories/how-to/">
-            how-to
-            <span class="category-count">1</span>
-          </a>
-        
-      </div>
+  <section id="posts" class="posts">
+    
+    
+    
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/pow-and-ram/">PoW &#43; Random Access Memory</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-08-29 </span>
+      <div class="post-category">
+          
+            <a href="/categories/blog/"> blog </a>
+          
+        </div>
+      
     </div>
+  </header>
   
+  <div class="post-content">
+    <div class="post-summary">
+      Как усложнить процесс майнинга на специальных устройствах - использовать PoW + Random Access Memory. Другими словами, в алгоритм хэширования включить еще и доказательство случайного чтения из памяти. Сейчас в Ethereum использует для этого отдельный DAG файл.
+Моя же идея заключается в вычислении хэша следующим образом:
+Берем заголовок (header), и случайное число (nonce) Вычисляем цепочку хэшей:
+header + (nonce + 0) header + (nonce + 1) header + (nonce + 2) .
+    </div>
+    <div class="read-more">
+      <a href="/post/pow-and-ram/" class="read-more-link">Читать...</a>
+    </div>
+  </div>
+</article>
+
+    
+  </section>
+  
+  <nav class="pagination">
+    
+      <a class="prev" href="/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">Prev</span>
+      </a>
+    
+  </nav>
 
         </div>
         
