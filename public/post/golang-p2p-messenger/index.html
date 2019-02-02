@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Изучаем Go: P2P messenger - easmith - заметки</title>
+  <title>Изучая Go: пишем p2p мессенджер со сквозным шифрованием - easmith - заметки</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -17,7 +17,10 @@
 
 
 <meta name="author" content="easmith" />
-  <meta name="description" content=" Peer To Peer messenger " />
+  <meta name="description" content="Yet another P2P Messenger Читать отзывы и документацию о языке не достаточно, чтобы научиться на нем писать более менее полезные приложения.
+Обязательно для закрепления нужно создать что-то интересное, чтобы наработки можно было бы использовать в других своих задачах.
+Статья ориентирована на новичков интересующихся языком go и пиринговыми сетями. И для профессионалов, умеющих предлагать разумные идеи или конструктивно критиковать.
+Программирую достаточно давно с разной степенью погруженности на java, php, js, python." />
 
   <meta name="keywords" content="easmith, github, bitcoin, blockchain" />
 
@@ -49,26 +52,35 @@
 
 
 
-<meta property="og:title" content="Изучаем Go: P2P messenger" />
-<meta property="og:description" content=" Peer To Peer messenger " />
+<meta property="og:title" content="Изучая Go: пишем p2p мессенджер со сквозным шифрованием" />
+<meta property="og:description" content="Yet another P2P Messenger Читать отзывы и документацию о языке не достаточно, чтобы научиться на нем писать более менее полезные приложения.
+Обязательно для закрепления нужно создать что-то интересное, чтобы наработки можно было бы использовать в других своих задачах.
+Статья ориентирована на новичков интересующихся языком go и пиринговыми сетями. И для профессионалов, умеющих предлагать разумные идеи или конструктивно критиковать.
+Программирую достаточно давно с разной степенью погруженности на java, php, js, python." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/golang-p2p-messenger/" /><meta property="article:published_time" content="2019-01-21T00:00:00&#43;00:00"/>
 <meta property="article:modified_time" content="2019-01-21T00:00:00&#43;00:00"/>
 
-<meta itemprop="name" content="Изучаем Go: P2P messenger">
-<meta itemprop="description" content=" Peer To Peer messenger ">
+<meta itemprop="name" content="Изучая Go: пишем p2p мессенджер со сквозным шифрованием">
+<meta itemprop="description" content="Yet another P2P Messenger Читать отзывы и документацию о языке не достаточно, чтобы научиться на нем писать более менее полезные приложения.
+Обязательно для закрепления нужно создать что-то интересное, чтобы наработки можно было бы использовать в других своих задачах.
+Статья ориентирована на новичков интересующихся языком go и пиринговыми сетями. И для профессионалов, умеющих предлагать разумные идеи или конструктивно критиковать.
+Программирую достаточно давно с разной степенью погруженности на java, php, js, python.">
 
 
 <meta itemprop="datePublished" content="2019-01-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-01-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="4">
+<meta itemprop="wordCount" content="2030">
 
 
 
 <meta itemprop="keywords" content="go,golang,p2p,messenger," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Изучаем Go: P2P messenger"/>
-<meta name="twitter:description" content=" Peer To Peer messenger "/>
+<meta name="twitter:title" content="Изучая Go: пишем p2p мессенджер со сквозным шифрованием"/>
+<meta name="twitter:description" content="Yet another P2P Messenger Читать отзывы и документацию о языке не достаточно, чтобы научиться на нем писать более менее полезные приложения.
+Обязательно для закрепления нужно создать что-то интересное, чтобы наработки можно было бы использовать в других своих задачах.
+Статья ориентирована на новичков интересующихся языком go и пиринговыми сетями. И для профессионалов, умеющих предлагать разумные идеи или конструктивно критиковать.
+Программирую достаточно давно с разной степенью погруженности на java, php, js, python."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -135,13 +147,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Изучаем Go: P2P messenger</h1>
+      <h1 class="post-title">Изучая Go: пишем p2p мессенджер со сквозным шифрованием</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2019-01-21 </span>
         <div class="post-category">
             
               <a href="/categories/golang/"> golang </a>
+            
+              <a href="/categories/p2p/"> p2p </a>
             
           </div>
         
@@ -156,7 +170,424 @@
     <div class="post-content">
       
 
-<h1 id="peer-to-peer-messenger">Peer To Peer messenger</h1>
+<h1 id="yet-another-p2p-messenger">Yet another P2P Messenger</h1>
+
+<p>Читать отзывы и документацию о языке не достаточно, чтобы научиться на нем писать более менее полезные приложения.</p>
+
+<p>Обязательно для закрепления нужно создать что-то интересное, чтобы наработки можно было бы использовать в других своих задачах.</p>
+
+<p><img src="/img/p2p-messenger/p2p-messenger-ReactUI.png" alt="Пример UI чата на ReactJs" /></p>
+
+<p>Статья ориентирована на новичков интересующихся языком go и пиринговыми сетями.
+И для профессионалов, умеющих предлагать разумные идеи или конструктивно критиковать.</p>
+
+<p>Программирую достаточно давно с разной степенью погруженности на java, php, js, python.
+И каждый язык программирования хорош в своей сфере.</p>
+
+<p>Основной сферой для Go называют создание распределенных сервисов, микросервисов.
+Чаще всего микросервис это небольшая программа, выполняющая свой узкоспециализированный функционал.</p>
+
+<p>Но микросервисы должны ещё уметь общаться друг с другом, поэтому инструмент для создания микросервисов должен позволять легко и без боли организовывать сетевое взаимодействие.
+Чтобы проверить это напишем приложение организовывающее децентрализованную сеть равноправных участников (Peer-To-Peer), самое простое - p2p мессенджер (кстати, есть ли русский синоним этому слову?).</p>
+
+<p>В коде активно изобретаю велосипеды и наступаю на грабли, чтобы прочувствовать golang, получить конструктивную критику и рациональные предложения.</p>
+
+<h2 id="что-делаем">Что делаем</h2>
+
+<p>Пир (peer) - уникальный экземпляр мессенджера.</p>
+
+<p>Наш мессенджер должен уметь:</p>
+
+<ul>
+<li>Находить соседние пиры</li>
+<li>Устанавливать соединение с другими пирами</li>
+<li>Шифровать обмен данными с пирами</li>
+<li>Принимать сообщения от пользователя</li>
+<li>Показывать сообщения пользователю</li>
+</ul>
+
+<p>Чтобы задачку сделать чуть интереснее, давайте сделаем так, чтобы все это проходило через один сетевой порт.</p>
+
+<p><img src="/img/p2p-messenger/p2p-messenger-HLD.png" alt="Условная схема работы мессенджера" /></p>
+
+<p>Если дернуть этот порт по HTTP, то получим реактовское приложение, которое дернет этот же порт, установив web socket соединение.</p>
+
+<p>Если дергать порт по HTTP не с локальной машины, то показываем баннер.</p>
+
+<p>Если к этому порту подключается другой пир, то происходит установка постоянного соединения со сквозным (end-to-end) шифрованием.</p>
+
+<h2 id="определяем-тип-входящего-соединения">Определяем тип входящего соединения</h2>
+
+<p>Для начала откроем порт для прослушивания и будем ждать новых соединений.</p>
+
+<pre><code class="language-go">net.ListenTCP(&quot;tcp&quot;, tcpAddr)
+</code></pre>
+
+<p>На новое соединение читаем первые 4 байта.</p>
+
+<p>Берем список глаголов HTTP и сравниваем с ним наши 4 байта.</p>
+
+<p>Теперь определяем с локальной ли машины происходит подключение, и если нет, то отвечаем баннером и &ldquo;вешаем трубку&rdquo;.</p>
+
+<pre><code class="language-go">buf, err := readWriter.Peek(4)
+/* обработка ошибки */
+
+if ItIsHttp(buf) {
+	handleHttp(readWriter, conn, p)
+} else {
+	peer := proto.NewPeer(conn)
+	p.HandleProto(readWriter, peer)
+}
+
+/* ... */
+
+if !strings.EqualFold(s, &quot;127&quot;) &amp;&amp; !strings.EqualFold(s, &quot;[::&quot;) {
+    response.Body = ioutil.NopCloser(strings.NewReader(&quot;Peer To Peer Messenger. see https://github.com/easmith/p2p-messenger&quot;))
+}
+</code></pre>
+
+<p>Если же подключение локальное, то отвечаем файлом, соответствующим запросу.</p>
+
+<p>Тут я решил написать обработку самостоятельно, хотя можно было бы воспользоваться имеющимся в стандартной библиотеке обработчиком.</p>
+
+<pre><code class="language-go">// свой способ 
+func processRequest(request *http.Request, response *http.Response) {/* много строчек кода */}
+
+// либо из страндартной библиотеки
+fileServer := http.FileServer(http.Dir(&quot;./front/build/&quot;))
+fileServer.ServeHTTP(NewMyWriter(conn), request)
+</code></pre>
+
+<p>Если же запрашивается путь <code>/ws</code>, то пробуем установить websocket соединение.</p>
+
+<p>Раз уж я собрал велосипед в обработке запросов файлов, то обработку ws соединения сделаю с помощью библиотеки <a href="https://github.com/gorilla/websocket">gorilla/websocket</a>.</p>
+
+<p>Для этого создадим <code>MyWriter</code> и реализуем в нем методы для соответствия интерфейсам <code>http.ResponseWriter</code> и <code>http.Hijacker</code>.</p>
+
+<pre><code class="language-go">// w - MyWriter
+func handleWs(w http.ResponseWriter, r *http.Request, p *proto.Proto) {
+    c, err := upgrader.Upgrade(w, r, w.Header())
+    /* теперь работаем с соединением почти как с обычным сокетом */
+}
+</code></pre>
+
+<h2 id="обнаружение-пиров">Обнаружение пиров</h2>
+
+<p>Для поиска пиров в локальной сети воспользуемся мультикастом UDP.</p>
+
+<p>Будем отправлять на Multicast IP адрес пакеты с информацией о нас самих.</p>
+
+<pre><code class="language-go">func startMeow(address string, p *proto.Proto) {
+		conn, err := net.DialUDP(&quot;udp&quot;, nil, addr)
+    	/* ... */
+    	for {
+    		_, err := conn.Write([]byte(fmt.Sprintf(&quot;meow:%v:%v&quot;, hex.EncodeToString(p.PubKey), p.Port)))
+    	    /* ... */
+    		time.Sleep(1 * time.Second)
+    	}
+}
+</code></pre>
+
+<p>И отдельно прослушивать от Multicast IP все UDP пакеты.</p>
+
+<pre><code class="language-go">func listenMeow(address string, p *proto.Proto, handler func(p *proto.Proto, peerAddress string)) {
+	/* ... */
+    conn, err := net.ListenMulticastUDP(&quot;udp&quot;, nil, addr)
+    /* ... */
+    _, src, err := conn.ReadFromUDP(buffer)
+    /* ... */
+    // connectToPeer
+    handler(p, peerAddress)
+}
+</code></pre>
+
+<p>Таким образом мы заявляем о себе и узнаем о появлении других пиров.</p>
+
+<p>Можно было бы организовать это на уровне IP и даже в <a href="https://godoc.org/golang.org/x/net/ipv4#hdr-Multicasting">официальной документации пакета IPv4</a> в качестве примера кода приводится как раз multicast пакета данных.</p>
+
+<h2 id="протокол-взаимодействия-пиров">Протокол взаимодействия пиров</h2>
+
+<p>Будем все общение между пирами упаковывать в конверт (Envelope).</p>
+
+<p>На любом конверте всегда есть отправитель и получатель, к этому всему мы добавим команду (которую он с собой несет), идентификатор (пока это случайное число, но можно сделать как хэш содержимого), длина содержимого и само содержимое конверта - сообщение или параметры команды.</p>
+
+<p><img src="/img/p2p-messenger/p2p-messenger-Envelope.png" alt="Байты конверта" /></p>
+
+<p>Команда, (или же тип содержимого) удачно расположим в самом начале конверта и определим список команд из 4 байт, не пересекающихся с именами глаголов HTTP.</p>
+
+<p>Весь конверт при передаче сериализуется в массив байт.</p>
+
+<h3 id="рукопожатие">Рукопожатие</h3>
+
+<p>Когда соединение установлено, пир тут же протягивает руку для рукопожатия, сообщая свое имя, публичный ключ и эфемерный публичный ключ для генерации общего сессионного ключа.</p>
+
+<p>В ответ пир получает аналогичный набор данных, регистрирует найденный пир в своем списке и вычисляет (CalcSharedSecret) общий сессионный ключ.</p>
+
+<pre><code class="language-go">func handShake(p *proto.Proto, conn net.Conn) *proto.Peer {
+    /* ... */ 
+    peer := proto.NewPeer(conn)
+    /* Отправляем свое имя и ключ*/
+    p.SendName(peer)
+    /* Ждем имя и ключ */
+    envelope, err := proto.ReadEnvelope(bufio.NewReader(conn))
+    /* ... */
+}
+</code></pre>
+
+<h3 id="обмен-пирами">Обмен пирами</h3>
+
+<p>После рукопожатия, пиры обмениваются своими списками пиров =)</p>
+
+<p>Для этого отправляется конверт с командой LIST, а в его содержимое кладется JSON список пиров.
+В ответ получаем аналогичный конверт.</p>
+
+<p>Находим в списках новых и с каждым из них проделываем попытку соединения, рукопожатия, обмена пирами и так далее…</p>
+
+<h3 id="обмен-пользовательскими-сообщениями">Обмен пользовательскими сообщениями</h3>
+
+<p>Пользовательские сообщения представляют для нас наибольшую ценность, поэтому каждое соединение будем шифровать и подписывать.</p>
+
+<h4 id="о-шифровании">О шифровании</h4>
+
+<p>В стандартных (гугловых) библиотеках golang из пакета crypto реализовано множество всяких разных алгоритмов (ГОСТовских нет).</p>
+
+<p>Наиболее удобной для подписей считаю кривую Ed25519. Будем использовать библиотеку ed25519 для подписи сообщений.</p>
+
+<p>В самом начале я подумывал использовать пару ключей полученных из ed25519 не только для подписи, но и для генерации сессионного ключа.</p>
+
+<p>Однако, ключи для подписи не применимы для вычисления общего (shared) ключа - над ними еще нужно поколдовать:</p>
+
+<pre><code class="language-go">func CreateKeyExchangePair() (publicKey [32]byte, privateKey [32]byte) {
+    pub, priv, err := ed25519.GenerateKey(nil)
+    /* ... */
+    copy(publicKey[:], pub[:])
+    copy(privateKey[:], priv[:])
+    curve25519.ScalarBaseMult(&amp;publicKey, &amp;privateKey)
+   /* ... */
+}
+</code></pre>
+
+<p>Поэтому решено генерить эфемерные ключи, и вообще говоря, это правильный подход не оставляющий злоумышленникам шансов подобрать общий ключ.</p>
+
+<p>Для любителей математики вот ссылки на wiki:
+<a href="https://ru.wikipedia.org/wiki/Протокол_Диффи_—_Хеллмана_на_эллиптических_кривых">Протокол_Диффи_—_Хеллмана_на_эллиптических_кривых</a>
+<a href="https://ru.wikipedia.org/wiki/EdDSA">Цифровая подпись EdDSA</a></p>
+
+<p>Генерация общего ключа вполне стандартная: сначала для нового соединения генерим эфемерные ключи, отправляем в сокет конверт с публичным ключом.
+Противоположная сторона делает то же самое, но в другом порядке: получает конверт с публичным ключом, генерит свою пару и отправляет публичный ключ в сокет.
+Теперь у каждого участника есть чужой публичный и свой приватный эфемерные ключи.</p>
+
+<p>Перемножив их получаем одинаковый для обоих ключ, который и будем использовать для шифрования сообщений.</p>
+
+<pre><code class="language-go">//CalcSharedSecret Calculate shared secret
+func CalcSharedSecret(publicKey []byte, privateKey []byte) (secret [32]byte) {
+	var pubKey [32]byte
+	var privKey [32]byte
+	copy(pubKey[:], publicKey[:])
+	copy(privKey[:], privateKey[:])
+	curve25519.ScalarMult(&amp;secret, &amp;privKey, &amp;pubKey)
+	return
+}
+</code></pre>
+
+<p>Шифровать сообщения будем поштучно давно зарекомендовавшим себя алгоритмом AES в режиме сцепления блоков (CBC).</p>
+
+<p>Вся эта реализации легко находятся в документации golang.</p>
+
+<p>Единственная доработка - авто заполнение сообщения нулевыми байтами для кратности его длины к длине блока шифрования (16 байт).</p>
+
+<pre><code class="language-go">    //Encrypt the message
+    func Encrypt(content []byte, key []byte) []byte {
+        padding := len(content) % aes.BlockSize
+        if padding != 0 {
+            repeat := bytes.Repeat([]byte(&quot;\x00&quot;), aes.BlockSize-(padding))
+            content = append(content, repeat...)
+        }
+        /* ... */
+    }
+
+    //Decrypt encrypted message
+    func Decrypt(encrypted []byte, key []byte) []byte {
+    	/* ... */
+        encrypted = bytes.Trim(encrypted, string([]byte(&quot;\x00&quot;)))
+        return encrypted
+    }
+</code></pre>
+
+<p>В далеком 2013 году реализовывал AES (с похожим на CBC режимом) для шифрования сообщений в Telegram в рамках конкурса от Павла Дурова.</p>
+
+<p>Для генерации эфемерного ключа в то время в телеграмм использовался самый обычный <a href="https://ru.wikipedia.org/wiki/Протокол_Диффи_—_Хеллмана">протокол Диффи - Хеллмана</a>.</p>
+
+<p>А чтобы исключить нагрузку от фейковых подключений перед каждым обменом ключами клиенты решали задачу факторизации.</p>
+
+<h2 id="gui">GUI</h2>
+
+<p>Нам нужно показать список пиров и список сообщений с ними, а также реагировать на новые сообщения, увеличивая счетчик рядом с именем пира.</p>
+
+<p>Тут без заморочек - ReactJS + websocket.</p>
+
+<p>Веб-сокет сообщения по сути своеобразные конвертики, только они не содержат в себе шифротекстов.</p>
+
+<p>Все они &ldquo;наследники&rdquo; типа <code>WsCmd</code> и при передаче сериализуются в JSON.</p>
+
+<pre><code class="language-go">//Serializable interface to detect that can to serialised to json
+type Serializable interface {
+    ToJson() []byte
+}
+func toJson(v interface{}) []byte {
+    json, err := json.Marshal(v)
+    /* обработка err */
+    return json
+}
+/* ... */
+//WsCmd WebSocket command
+type WsCmd struct {
+	Cmd string `json:&quot;cmd&quot;`
+}
+//WsMessage WebSocket command: new Message
+type WsMessage struct {
+    WsCmd
+    From    string `json:&quot;from&quot;`
+    To      string `json:&quot;to&quot;`
+    Content string `json:&quot;content&quot;`
+}
+//ToJson convert to JSON bytes
+func (v WsMessage) ToJson() []byte {
+    return toJson(v)
+}
+/* ... */
+</code></pre>
+
+<p>Итак, приходит HTTP запрос на корень (&ldquo;/&rdquo;), теперь чтобы отобразить фронт заглядываем в каталог “front/build” и отдаем index.html</p>
+
+<p>Что ж интерфейс сверстан, теперь выбор для пользователей: запускать его в браузере или в отдельном окошке - WebView.</p>
+
+<p>Для последнего варианта использовал <a href="https://github.com/zserge/webview">zserge/webview</a></p>
+
+<pre><code class="language-go">    e := webview.Open(&quot;Peer To Peer Messenger&quot;, fmt.Sprintf(&quot;http://localhost:%v&quot;, initParams.Port), 800, 600, false)
+</code></pre>
+
+<p>Для сборки приложения с ним нужно установить ещё либу в систему</p>
+
+<pre><code class="language-bash">sudo apt install libwebkit2gtk-4.0-dev
+</code></pre>
+
+<p>В ходе раздумий над GUI нашел множество библиотек для GTK, QT, и очень по гиковски смотрелся бы консольный интерфейс - <a href="https://github.com/jroimartin/gocui">https://github.com/jroimartin/gocui</a> - по-моему очень даже интересная идея.</p>
+
+<h2 id="запуск-мессенджера">Запуск мессенджера</h2>
+
+<h3 id="установка-golang">Установка golang</h3>
+
+<p>Конечно, сначала нужно установить go.
+Для этого настоятельно рекомендую воспользоваться инструкцией <a href="https://golang.org/doc/install">golang.org/doc/install</a>.</p>
+
+<p>Упростил инструкцию до <a href="https://gist.github.com/easmith/e88ab51d8a228e8945a6b636f4024d45">bash скрипта</a></p>
+
+<h3 id="загрузка-приложения-в-gopath">Загрузка приложения в GOPATH</h3>
+
+<p>Так уж устроен go, что все библиотеки и даже ваши проекты должны лежать в так называемом GOPATH.</p>
+
+<p>По-умолчанию это $HOME/go. Go позволяет стянуть исходники из публичного репозитория простой командой:</p>
+
+<pre><code class="language-bash">go get github.com/easmith/p2p-messenger
+</code></pre>
+
+<p>Теперь в вашем каталоге <code>$HOME/go/src/github.com/easmith/p2p-messenger</code> появится исходник из ветки master</p>
+
+<h3 id="установка-npm-и-сборка-фронта">Установка npm и сборка фронта</h3>
+
+<p>Как писал выше, наш GUI - веб-приложение с фронтом на ReactJs, поэтому фронт ещё нужно собрать.</p>
+
+<p>Nodejs + npm - тут как обычно.</p>
+
+<p>На всякий случай вот <a href="https://www.digitalocean.com/community/tutorials/node-js-ubuntu-18-04-ru">инструкция для убунту</a></p>
+
+<p>Теперь стандартно запускаем сборку фронта</p>
+
+<pre><code class="language-bash">cd front
+npm update
+npm run build
+</code></pre>
+
+<p>Фронт готов!</p>
+
+<h3 id="запуск">Запуск</h3>
+
+<p>Перейдем обратно в корень и запустим пир нашего мессенджера.</p>
+
+<p>При запуске можем указать имя своего пира, порт, файл с адресами других пиров и флаг указывающий запускать ли WebView.</p>
+
+<p>По-умолчанию используется <code>$USER@$HOSTNAME</code> в качестве имени пира и порт 35035.</p>
+
+<p>Итак, запускаем и чатимся с друзьями по локальной сети.</p>
+
+<pre><code class="language-bash">go run app.go -name Snowden
+</code></pre>
+
+<h2 id="отзыв-о-программировании-на-golang">Отзыв о программировании на golang</h2>
+
+<ul>
+<li>Самое важное что хотелось бы отметить:** на go сразу получается реализовать то, что задумал**.
+Почти все необходимое есть в стандартной библиотеке.</li>
+<li>Однако, была и сложность, когда я начал проект в отличном от GOPATH каталоге.
+Для написания кода использовал GoLand. И поначалу смущало автоматическое форматирование кода с автоимпортом библиотек.</li>
+<li>В <strong>IDE много кодогенераторов</strong>, что позволяло сосредоточится на разработке, а не на наборе кода.</li>
+<li>К частой обработке ошибок быстро <strong>привыкаешь</strong>, но случается рука-лицо, когда понимаешь что для go нормальная ситуация, когда суть ошибки анализируется по ее строковому представлению.
+<code>go
+err != io.EOF
+</code></li>
+<li>Чуть лучше дело обстоят с библиотекой os. Там понять суть проблемы помогают такие конструкции
+<code>go
+if os.IsNotExist(err) { /* ... */ }
+</code></li>
+<li>Из коробки go учит нас правильно документировать код и писать тесты.
+И тут есть свои но. Мы описали интерфейс с методом <code>ToJson()</code>.
+Так вот, генератор документации не наследует описание этого метода на методы его реализующие, поэтому чтобы убрать лишние варниги, приходится копировать документацию в каждый реализованный метод (proto/mtypes.go).</li>
+<li>В последнее время привык к мощи log4j в java, поэтому не хватает хорошего логгера в go.
+Наверное, стоит поискать на просторах гитхаба красивое логгирование с аппендерами и форматерами.</li>
+<li>Непривычна работа с массивами.
+Например, конкатенация происходит через функцию <code>append</code>, а преобразование массива произвольной длины в массив фиксированной длины через <code>copy</code>.</li>
+<li><code>switch-case</code> работает как <code>if-elseif-else</code> - а вот это интересный подход, но опять рука-лицо:
+если хотим привычное поведение <code>switch-case</code>, нужно у каждого кейса проставлять <code>fallthrough</code>.
+А еще можно использовать <code>goto</code>, но давайте не будем, пожалуйста!</li>
+<li>Нет тернарного оператора и часто это не удобно.</li>
+</ul>
+
+<h2 id="что-дальше">Что дальше?</h2>
+
+<p>Вот и реализован простейший Peer-To-Peer мессенджер.
+Репозиторий: <a href="https://github.com/easmith/p2p-messenger">https://github.com/easmith/p2p-messenger</a></p>
+
+<p>Набиты шишки, дальше можно улучшать пользовательский функционал: отправка файлов, картинок, аудио, смайлов и т.д и т.п.</p>
+
+<p>А можно не изобретать свой протокол, и задействовать гугловый Protocol Buffers,
+подключить блокчейн и защититься от спама с помощью смарт-контрактов Ethereum.</p>
+
+<p>На смарт-контрактах же организовать групповые чаты, каналы, систему имен, аватарки и профили пользователей.</p>
+
+<p>Еще обязательно запустить seed пиры, реализовать обход NAT и передачу сообщений от пира к пиру.</p>
+
+<p>В итоге получится неплохая замена телеграмма/вотсапа, останется только всех друзей туда пересадить =)</p>
+
+<h2 id="полезности">Полезности</h2>
+
+<p>В ходе работы над мессенджером нашел интересные для начинающего go разработчика страницы.
+Делюсь ими с вами:</p>
+
+<p><a href="https://golang.org/doc/">golang.org/doc/</a> - документация по языку, все просто, понятно и с примерами. Эту же документацию можно запустить локально командой</p>
+
+<pre><code class="language-bash">godoc -http=:6060
+</code></pre>
+
+<p><a href="https://gobyexample.com/">gobyexample.com</a> - сборник простых примеров</p>
+
+<p><a href="http://golang-book.ru/">golang-book.ru</a> - хорошая книга на русском</p>
+
+<p><a href="https://github.com/dariubs/GoBooks">github.com/dariubs/GoBooks</a> - сборник книг о Go.</p>
+
+<p><a href="https://awesome-go.com/">awesome-go.com</a> - список интересных библиотек, фреймворков и приложений на go. Категоризация более менее, а вот описание многих из них очень скудная, что не помогает поиску по Ctrl+F</p>
+
+<p><a href="https://habr.com/ru/post/437686/">Эта статья на хабре</a></p>
 
     </div>
 
